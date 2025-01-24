@@ -39,25 +39,18 @@ const items = [
 ];
 
 
-const Chip = styled(MuiChip)(({ theme }) => ({
-  variants: [
-    {
-      props: ({ selected }) => selected,
-      style: {
-        background:
-          'linear-gradient(to bottom right, hsl(210, 98%, 48%), hsl(210, 98%, 35%))',
-        color: 'hsl(0, 0%, 100%)',
-        borderColor: theme.palette.primary.light,
-        '& .MuiChip-label': {
-          color: 'hsl(0, 0%, 100%)',
-        },
-        ...theme.applyStyles('dark', {
-          borderColor: theme.palette.primary.dark,
-        }),
-      },
-    },
-  ],
+const Chip = styled(MuiChip)(({ theme, selected }) => ({
+  background: selected ? theme.palette.primary.main : 'transparent',
+  color: selected ? theme.palette.common.white : theme.palette.primary.main,
+  borderColor: selected ? theme.palette.primary.light : theme.palette.primary.main,
+  '& .MuiChip-label': {
+    color: selected ? theme.palette.primary.dark : theme.palette.primary.main,
+  },
+  ...(theme.palette.mode === 'dark' && {
+    borderColor: selected ? theme.palette.primary.main : theme.palette.primary.dark,
+  }),
 }));
+
 
 function MobileLayout({ selectedItemIndex, handleItemClick, selectedFeature }) {
   if (!items[selectedItemIndex]) {
@@ -73,7 +66,7 @@ function MobileLayout({ selectedItemIndex, handleItemClick, selectedFeature }) {
         gap: 2,
       }}
     >
-      <Box sx={{ display: 'flex', gap: 2, overflow: 'auto', scrollbarWidth: 'none' }}>
+      <Box sx={{ display: 'flex', gap: 2, overflowX: 'auto', paddingBottom: 1 }}>
         {items.map(({ title }, index) => (
           <Chip
             size="medium"
@@ -108,11 +101,11 @@ function MobileLayout({ selectedItemIndex, handleItemClick, selectedFeature }) {
         <Box sx={{ px: 2, pb: 2 }}>
           <Typography
             gutterBottom
-            sx={{ color: 'text.primary', fontWeight: 'medium' }}
+            sx={{ color: 'primary.main', fontWeight: 'bold', fontSize: '20px' }}
           >
             {selectedFeature.title}
           </Typography>
-          <Typography variant="body2" sx={{ color: 'text.secondary', mb: 1.5 }}>
+          <Typography variant="body2" sx={{ color: 'primary.light', mb: 1.5 }}>
             {selectedFeature.description}
           </Typography>
         </Box>
@@ -120,18 +113,6 @@ function MobileLayout({ selectedItemIndex, handleItemClick, selectedFeature }) {
     </Box>
   );
 }
-
-MobileLayout.propTypes = {
-  handleItemClick: PropTypes.func.isRequired,
-  selectedFeature: PropTypes.shape({
-    description: PropTypes.string.isRequired,
-    icon: PropTypes.element,
-    imageDark: PropTypes.string.isRequired,
-    imageLight: PropTypes.string.isRequired,
-    title: PropTypes.string.isRequired,
-  }).isRequired,
-  selectedItemIndex: PropTypes.number.isRequired,
-};
 
 export { MobileLayout };
 
@@ -145,23 +126,15 @@ export default function Features() {
   const selectedFeature = items[selectedItemIndex];
 
   return (
-    <Container id="features" sx={{ py: { xs: 16, sm: 16 } }}>
+    <Container id="features" sx={{ py: { xs: 8, sm: 16 } }}>
       <Box sx={{ width: { sm: '100%', md: '60%' } }}>
-        <Typography
-          component="h2"
-          variant="h4"
-          gutterBottom
-          color='primary'
-        >
+        <Typography component="h2" variant="h4" gutterBottom color='primary'>
           What is LolFi?
         </Typography>
-        <Typography
-          variant="body1"
-          sx={{ color: 'text.secondary', mb: { xs: 2, sm: 4 } }}
-        >
-          
+        <Typography variant="body1" sx={{ color: 'primary.light', mb: { xs: 2, sm: 4 } }}>
         </Typography>
       </Box>
+
       <Box
         sx={{
           display: 'flex',
@@ -215,7 +188,6 @@ export default function Features() {
                   ]}
                 >
                   {icon}
-
                   <Typography variant="h6">{title}</Typography>
                   <Typography variant="body2">{description}</Typography>
                 </Box>
@@ -228,11 +200,12 @@ export default function Features() {
             selectedFeature={selectedFeature}
           />
         </div>
+
         <Box
           sx={{
             display: { xs: 'none', sm: 'flex' },
             width: { xs: '100%', md: '70%' },
-            height: 'var(--items-image-height)',
+            height: 'auto',
           }}
         >
           <Card
@@ -247,7 +220,7 @@ export default function Features() {
             <Box
               sx={(theme) => ({
                 m: 'auto',
-                width: 420,
+                width: { xs: 320, sm: 420 },
                 height: 500,
                 backgroundSize: 'contain',
                 backgroundImage: 'var(--items-imageLight)',
@@ -270,3 +243,4 @@ export default function Features() {
     </Container>
   );
 }
+

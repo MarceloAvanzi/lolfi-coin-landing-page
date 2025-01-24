@@ -68,7 +68,7 @@ export default function Highlights() {
         </Box>
         <Grid container spacing={2}>
           {items.map((item, index) => (
-            <Grid item xs={12} sm={6} md={4} key={index}>
+            <Grid xs={12} sm={6} md={4} key={index}>
               <TwitterCard
                 onClick={() => window.open(item.link, '_blank')}
               >

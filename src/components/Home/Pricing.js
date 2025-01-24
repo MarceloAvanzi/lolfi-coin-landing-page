@@ -52,7 +52,7 @@ export default function Pricing() {
         {plans.map((plan) => (
           <Grid
             size={{ xs: 12, sm: plan.title === 'Top 1º' ? 12 : 6, md: 4 }}
-            key={plan.title}
+            key={plan.name}
           >
             <Card
               sx={[
