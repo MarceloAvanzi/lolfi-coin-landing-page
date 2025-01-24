@@ -69,6 +69,22 @@ export const red = {
   800: 'hsl(0, 95%, 12%)',
   900: 'hsl(0, 93%, 6%)',
 };
+export const blue = {
+  50: "#e3f2fd",
+  100: "#bbdefb",
+  200: "#90caf9",
+  300: "#64b5f6",
+  400: "#42a5f5",
+  500: "#2196f3",
+  600: "#1e88e5",
+  700: "#1976d2",
+  800: "#1565c0",
+  900: "#0d47a1",
+  A100: "#82b1ff",
+  A200: "#448aff",
+  A400: "#2979ff",
+  A700: "#2962ff"
+}
 
 export const getDesignTokens = (mode) => {
   customShadows[1] =
@@ -92,15 +108,15 @@ export const getDesignTokens = (mode) => {
         }),
       },
       info: {
-        light: brand[100],
-        main: brand[300],
-        dark: brand[600],
+        light: blue[100],
+        main: blue[300],
+        dark: blue[600],
         contrastText: gray[50],
         ...(mode === 'dark' && {
-          contrastText: brand[300],
-          light: brand[500],
-          main: brand[700],
-          dark: brand[900],
+          contrastText: blue[300],
+          light: blue[500],
+          main: blue[700],
+          dark: blue[900],
         }),
       },
       warning: {

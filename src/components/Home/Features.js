@@ -16,7 +16,7 @@ const items = [
     icon: <SentimentSatisfiedRoundedIcon />,
     title: 'LolFi Coin',
     description:
-      'LolFi is a community-driven meme coin built on the Solana blockchain, combining fun, innovation, and decentralized finance (DeFi). ',
+      'LolFi is a community-driven meme coin built on the Solana blockchain, combining fun 🤪, innovation 💡, and decentralized finance (DeFi) 🚀.',
     imageLight: 'url("/static/images/templates/templates-images/dash-light.png")',
     imageDark: 'url("/static/images/templates/templates-images/dash-dark.png")',
   },
@@ -24,7 +24,7 @@ const items = [
     icon: <TrendingUpRoundedIcon />,
     title: 'Purpose',
     description:
-      'Designed to spread laughter while exploring the potential of crypto, LolFi is more than just a coin, it\'s a movement to unite humor and blockchain technology. Join the fun and be part of the LolFi revolution!',
+      'Designed to spread laughter while exploring the potential of crypto 💰, LolFi is more than just a coin, it\'s a movement ✊ to unite humor and blockchain technology. Join the fun and be part of the LolFi revolution! 🎉',
     imageLight: 'url("/static/images/templates/templates-images/mobile-light.png")',
     imageDark: 'url("/static/images/templates/templates-images/mobile-dark.png")',
   },
@@ -32,11 +32,12 @@ const items = [
     icon: <DevicesRoundedIcon />,
     title: 'Is it a Joke Coin?',
     description:
-      'Absolutely not, joke is just on the name. LolFi is a serious project, to represent the spirit of fun, community, and innovation in the crypto world. We\'re here to make an impact while keeping things light-hearted!',
+      'Absolutely not, joke is just on the name! LolFi is a serious project, representing the spirit of fun 😜, community 👥, and innovation in the crypto world 🌍. We\'re here to make an impact while keeping things light-hearted! 😎',
     imageLight: 'url("/static/images/templates/templates-images/devices-light.png")',
     imageDark: 'url("/static/images/templates/templates-images/devices-dark.png")',
   },
 ];
+
 
 const Chip = styled(MuiChip)(({ theme }) => ({
   variants: [

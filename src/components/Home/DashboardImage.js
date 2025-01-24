@@ -3,8 +3,8 @@ import Box from '@mui/material/Box';
 import Container from '@mui/material/Container';
 import Stack from '@mui/material/Stack';
 import Typography from '@mui/material/Typography';
-import dashboardWhiteTheme from 'assets/images/dashboard/dashboardWhiteTheme.png'
-import dashboardDarkTheme from 'assets/images/dashboard/dashboardDarkTheme.png'
+import dashboardWhiteTheme from 'assets/images/dashboard/dashboardWhiteTheme.png';
+import dashboardDarkTheme from 'assets/images/dashboard/dashboardDarkTheme.png';
 import { styled } from '@mui/material/styles';
 
 const StyledBox = styled('div')(({ theme }) => ({
@@ -56,26 +56,27 @@ export default function DashboardImage() {
           display: 'flex',
           flexDirection: 'column',
           alignItems: 'center',
-          pt: { xs: 14, sm: 20 },
+          pt: { xs: 16, sm: 20 },
           pb: { xs: 8, sm: 12 },
         }}
       >
         <Stack
           spacing={2}
           useFlexGap
-          sx={{ alignItems: 'center', width: { xs: '100%', sm: '70%' } }}
+          sx={{
+            alignItems: 'center',
+            width: { xs: '100%', sm: '70%' },
+            textAlign: 'center', // Added text alignment to center the content
+          }}
         >
           <Typography
             variant="h1"
             component="span"
             sx={{
-              display: 'flex',
-              flexDirection: { xs: 'column', sm: 'row' },
-              alignItems: 'center',
               fontSize: 'clamp(3rem, 10vw, 3.5rem)',
+              fontWeight: 'bold', // Optional, you can add this if you want the text to be bolder
             }}
           >
-            {/* Meet&nbsp;&nbsp; */}
             <Typography
               component="span"
               variant="h1"
@@ -94,12 +95,12 @@ export default function DashboardImage() {
             component="span"
             sx={{
               textAlign: 'center',
-              color: 'text.pŕimary',
+              color: 'text.primary',
               fontSize: '20px',
               width: { sm: '100%', md: '80%' },
             }}
           >
-            The coin that brings laughter and value together on the Solana blockchain! 🚀😂
+            The coin that brings laughter and value together on the Solana blockchain! 🚀
           </Typography>
         </Stack>
         <StyledBox id="image" />

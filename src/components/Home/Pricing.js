@@ -51,7 +51,7 @@ export default function Pricing() {
       >
         {plans.map((plan) => (
           <Grid
-            size={{ xs: 12, sm: plan.title === 'Enterprise' ? 12 : 6, md: 4 }}
+            size={{ xs: 12, sm: plan.title === 'Top 1º' ? 12 : 6, md: 4 }}
             key={plan.title}
           >
             <Card
@@ -62,18 +62,6 @@ export default function Pricing() {
                   flexDirection: 'column',
                   gap: 4,
                 },
-                plan.title === 'Plano Mercado Livre' &&
-                  ((theme) => ({
-                    border: 'none',
-                    background:
-                      'radial-gradient(circle at 50% 0%, hsl(220, 20%, 35%), hsl(220, 30%, 6%))',
-                    boxShadow: `0 8px 12px hsla(220, 20%, 42%, 0.2)`,
-                    ...theme.applyStyles('dark', {
-                      background:
-                        'radial-gradient(circle at 50% 0%, hsl(220, 20%, 20%), hsl(220, 30%, 16%))',
-                      boxShadow: `0 8px 12px hsla(0, 0%, 0%, 0.8)`,
-                    }),
-                  })),
               ]}
             >
               <CardContent>
@@ -86,17 +74,11 @@ export default function Pricing() {
                       alignItems: 'center',
                       gap: 2,
                     },
-                    plan.title === 'Plano Mercado Livre'
-                      ? { color: 'grey.100' }
-                      : { color: '' },
                   ]}
                 >
                   <Typography component="h3" variant="h6">
                     {plan.title}
                   </Typography>
-                  {plan.title === 'Plano Mercado Livre' && (
-                    <Chip icon={<AutoAwesomeIcon />} label={plan.subheader} />
-                  )}
                 </Box>
                 <Box
                   sx={[
@@ -104,15 +86,12 @@ export default function Pricing() {
                       display: 'flex',
                       alignItems: 'center', // Align icon and text horizontally
                     },
-                    plan.title === 'Plano Mercado Livre'
-                      ? { color: 'grey.50' }
-                      : { color: null },
                   ]}
                 >
                   <AutoAwesomeIcon
                     sx={[
                       { mr: 1, fontSize: '1.5rem' }, // Adding margin and size to the icon
-                      plan.title === 'Top 1º' ? { color: 'primary.light' } : {},
+                      plan.title === 'Top 1º' ? { color: 'primary.main' } : {},
                     ]}
                   />
                   <Typography component="h3" variant="h2">
@@ -130,18 +109,15 @@ export default function Pricing() {
                         {
                           width: 20,
                         },
-                        plan.title === 'Plano Mercado Livre'
-                          ? { color: 'primary.light' }
-                          : { color: 'primary.main' },
+                        plan.title === 'Top 1º'
+                          ? { color: 'primary.main' }
+                          : { color: 'primary.light' },
                       ]}
                     />
                     <Typography
                       variant="subtitle2"
                       component={'span'}
                       sx={[
-                        plan.title === 'Plano Mercado Livre'
-                          ? { color: 'grey.50' }
-                          : { color: null },
                       ]}
                     >
                       {line}
