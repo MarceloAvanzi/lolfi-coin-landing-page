@@ -6,35 +6,33 @@ import Card from '@mui/material/Card';
 import MuiChip from '@mui/material/Chip';
 import Container from '@mui/material/Container';
 import Typography from '@mui/material/Typography';
-
 import { styled } from '@mui/material/styles';
-
+import SentimentSatisfiedRoundedIcon from '@mui/icons-material/SentimentSatisfiedRounded';
+import TrendingUpRoundedIcon from '@mui/icons-material/TrendingUpRounded';
 import DevicesRoundedIcon from '@mui/icons-material/DevicesRounded';
-import EdgesensorHighRoundedIcon from '@mui/icons-material/EdgesensorHighRounded';
-import ViewQuiltRoundedIcon from '@mui/icons-material/ViewQuiltRounded';
 
 const items = [
   {
-    icon: <ViewQuiltRoundedIcon />,
-    title: 'Dashboard Completo',
+    icon: <SentimentSatisfiedRoundedIcon />,
+    title: 'LolFi Coin',
     description:
-      'Nosso dashboard oferece uma visão geral das principais métricas de vendas, como faturamento, volume de vendas por período e de cada produto, por região, filtros e muito mais. Tudo para você otimizar suas operações.',
+      'LolFi is a community-driven meme coin built on the Solana blockchain, combining fun, innovation, and decentralized finance (DeFi). ',
     imageLight: 'url("/static/images/templates/templates-images/dash-light.png")',
     imageDark: 'url("/static/images/templates/templates-images/dash-dark.png")',
   },
   {
-    icon: <EdgesensorHighRoundedIcon />,
-    title: 'Suporte para celular',
+    icon: <TrendingUpRoundedIcon />,
+    title: 'Purpose',
     description:
-      'Acesse todas as funcionalidades diretamente do seu celular, de forma responsiva e otimizada.',
+      'Designed to spread laughter while exploring the potential of crypto, LolFi is more than just a coin, it\'s a movement to unite humor and blockchain technology. Join the fun and be part of the LolFi revolution!',
     imageLight: 'url("/static/images/templates/templates-images/mobile-light.png")',
     imageDark: 'url("/static/images/templates/templates-images/mobile-dark.png")',
   },
   {
     icon: <DevicesRoundedIcon />,
-    title: 'Disponível de qualquer lugar',
+    title: 'Is it a Joke Coin?',
     description:
-      'Você poderá gerenciar seu negócio de qualquer dispositivo com acesso à internet, garantindo flexibilidade e mobilidade total na gestão das suas vendas.',
+      'Absolutely not, joke is just on the name. LolFi is a serious project, to represent the spirit of fun, community, and innovation in the crypto world. We\'re here to make an impact while keeping things light-hearted!',
     imageLight: 'url("/static/images/templates/templates-images/devices-light.png")',
     imageDark: 'url("/static/images/templates/templates-images/devices-dark.png")',
   },
@@ -154,14 +152,13 @@ export default function Features() {
           gutterBottom
           color='primary'
         >
-          Nosso Produto
+          What is LolFi?
         </Typography>
         <Typography
           variant="body1"
           sx={{ color: 'text.secondary', mb: { xs: 2, sm: 4 } }}
         >
-          Monitore suas vendas com gráficos detalhados,
-          indicadores de top produtos e regiões, além de relatórios completos.
+          
         </Typography>
       </Box>
       <Box
@@ -195,7 +192,7 @@ export default function Features() {
                     },
                   }),
                   selectedItemIndex === index && {
-                    backgroundColor: 'action.selected',
+                    backgroundColor: 'background.paper',
                   },
                 ]}
               >
@@ -209,10 +206,10 @@ export default function Features() {
                       gap: 1,
                       textAlign: 'left',
                       textTransform: 'none',
-                      color: 'text.secondary',
+                      color: 'primary.light',
                     },
                     selectedItemIndex === index && {
-                      color: 'text.primary',
+                      color: 'primary.dark',
                     },
                   ]}
                 >

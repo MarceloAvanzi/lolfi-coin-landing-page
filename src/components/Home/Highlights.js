@@ -5,49 +5,49 @@ import Container from '@mui/material/Container';
 import Grid from '@mui/material/Grid2';
 import Stack from '@mui/material/Stack';
 import Typography from '@mui/material/Typography';
-import AutoFixHighRoundedIcon from '@mui/icons-material/AutoFixHighRounded';
-import ConstructionRoundedIcon from '@mui/icons-material/ConstructionRounded';
-import QueryStatsRoundedIcon from '@mui/icons-material/QueryStatsRounded';
-import SettingsSuggestRoundedIcon from '@mui/icons-material/SettingsSuggestRounded';
-import SupportAgentRoundedIcon from '@mui/icons-material/SupportAgentRounded';
-import ThumbUpAltRoundedIcon from '@mui/icons-material/ThumbUpAltRounded';
+import FacebookIcon from '@mui/icons-material/Facebook';
+import TwitterIcon from '@mui/icons-material/Twitter';
+import InstagramIcon from '@mui/icons-material/Instagram';
+import RedditIcon from '@mui/icons-material/Reddit';
+import TelegramIcon from '@mui/icons-material/Telegram';
+import YouTubeIcon from '@mui/icons-material/YouTube';
 
 const items = [
   {
-    icon: <SettingsSuggestRoundedIcon />,
-    title: 'Desempenho adaptável',
-    description:
-      'Nossa plataforma ajusta-se facilmente ao volume de vendas e demandas do Mercado Livre, maximizando a eficiência na gestão.',
+    icon: <FacebookIcon />,
+    title: 'Facebook',
+    description: 'Connect with us on Facebook to stay updated and join the community!',
+    link: 'https://facebook.com/lolfi',
   },
   {
-    icon: <ConstructionRoundedIcon />,
-    title: 'Feito para durar',
-    description:
-      'Solução robusta e confiável para acompanhar suas vendas a longo prazo, com dados sempre atualizados.',
+    icon: <TwitterIcon />,
+    title: 'Twitter',
+    description: 'Follow us on Twitter for real-time updates and engagement.',
+    link: 'https://twitter.com/lolfi',
   },
   {
-    icon: <ThumbUpAltRoundedIcon />,
-    title: 'Experiência de usuário excelente',
-    description:
-      'Gerencie suas vendas com uma interface intuitiva, facilitando o acompanhamento de métricas e produtos.',
+    icon: <InstagramIcon />,
+    title: 'Instagram',
+    description: 'Join our Instagram community and be part of the fun!',
+    link: 'https://instagram.com/lolfi',
   },
   {
-    icon: <AutoFixHighRoundedIcon />,
-    title: 'Funcionalidade inovadora',
-    description:
-      'Fique à frente com recursos que oferecem insights exclusivos sobre top produtos, regiões e vendas.',
+    icon: <RedditIcon />,
+    title: 'Reddit',
+    description: 'Engage with fellow LolFi enthusiasts on our Reddit page!',
+    link: 'https://reddit.com/r/lolfi',
   },
   {
-    icon: <SupportAgentRoundedIcon />,
-    title: 'Suporte confiável',
-    description:
-      'Conte com nosso suporte especializado, disponível para auxiliar no monitoramento e nas suas análises de vendas.',
+    icon: <TelegramIcon />,
+    title: 'Telegram',
+    description: 'Chat with us and other members directly on Telegram!',
+    link: 'https://t.me/lolfi',
   },
   {
-    icon: <QueryStatsRoundedIcon />,
-    title: 'Precisão em cada detalhe',
-    description:
-      'Relatórios detalhados e gráficos interativos, que ajudam você a tomar decisões mais estratégicas e acertadas.',
+    icon: <YouTubeIcon />,
+    title: 'YouTube',
+    description: 'Watch our latest videos and tutorials on YouTube.',
+    link: 'https://youtube.com/c/lolfi',
   },
 ];
 
@@ -59,7 +59,6 @@ export default function Highlights() {
         pt: { xs: 16, sm: 16 },
         pb: { xs: 8, sm: 16 },
         color: 'white',
-        // bgcolor: 'grey.900',
       }}
     >
       <Container
@@ -77,12 +76,11 @@ export default function Highlights() {
             textAlign: { sm: 'left', md: 'center' },
           }}
         >
-          <Typography component="h2" variant="h4" gutterBottom color='primary'>
-            Destaques
+          <Typography component="h2" variant="h4" gutterBottom color="primary">
+            Social Media & Community
           </Typography>
-          <Typography variant="body1" sx={{ color: 'grey.600' }}>
-            Descubra por que nossa solução se destaca: monitoramento preciso de vendas, visualização de métricas, 
-            interface amigável, relatórios e suporte confiável.
+          <Typography variant="body1" sx={{ color: 'grey.400' }}>
+            Join the LolFi community on social media and be part of the fun!
           </Typography>
         </Box>
         <Grid container spacing={2}>
@@ -94,19 +92,24 @@ export default function Highlights() {
                 spacing={1}
                 useFlexGap
                 sx={{
-                  color: 'primary',
+                  color: 'primary.main',
                   p: 3,
                   height: '100%',
                   borderColor: 'hsla(220, 25%, 25%, 0.3)',
-                  // backgroundColor: 'grey.800',
+                  backgroundColor: 'background.paper',
+                  cursor: 'pointer',
+                  '&:hover': {
+                    backgroundColor: 'primary.light',
+                  },
                 }}
+                onClick={() => window.open(item.link, '_blank')}
               >
                 <Box sx={{ opacity: '50%' }}>{item.icon}</Box>
                 <div>
                   <Typography gutterBottom sx={{ fontWeight: 'medium' }}>
                     {item.title}
                   </Typography>
-                  <Typography variant="body2" sx={{ color: 'grey.600' }}>
+                  <Typography variant="body2" sx={{ color: 'grey.200' }}>
                     {item.description}
                   </Typography>
                 </div>

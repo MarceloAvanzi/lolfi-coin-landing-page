@@ -41,7 +41,7 @@ export default function Pricing() {
           gutterBottom
           color='primary'
         >
-          Planos
+          Where can I buy?
         </Typography>
       </Box>
       <Grid
@@ -102,18 +102,21 @@ export default function Pricing() {
                   sx={[
                     {
                       display: 'flex',
-                      alignItems: 'baseline',
+                      alignItems: 'center', // Align icon and text horizontally
                     },
                     plan.title === 'Plano Mercado Livre'
                       ? { color: 'grey.50' }
                       : { color: null },
                   ]}
                 >
+                  <AutoAwesomeIcon
+                    sx={[
+                      { mr: 1, fontSize: '1.5rem' }, // Adding margin and size to the icon
+                      plan.title === 'Top 1º' ? { color: 'primary.light' } : {},
+                    ]}
+                  />
                   <Typography component="h3" variant="h2">
-                    R${plan.price}
-                  </Typography>
-                  <Typography component="h3" variant="h6">
-                    &nbsp; por mês
+                    {plan.name}
                   </Typography>
                 </Box>
                 <Divider sx={{ my: 2, opacity: 0.8, borderColor: 'divider' }} />

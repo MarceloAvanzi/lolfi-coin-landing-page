@@ -87,27 +87,20 @@ export default function DashboardImage() {
                 }),
               })}
             >
-              LolFi
+              Welcome to LolFi
             </Typography>
           </Typography>
-          {/* <Typography
+          <Typography
             component="span"
             sx={{
               textAlign: 'center',
-              color: 'text.secondary',
+              color: 'text.pŕimary',
+              fontSize: '20px',
               width: { sm: '100%', md: '80%' },
             }}
           >
-            Nossa ferramenta transforma os dados do Mercado Livre
-            e Shopee em insights valiosos, ajudando você a maximizar
-            o desempenho do seu e-commerce. Com um dashboard completo
-            e fácil de usar, oferecemos visualizações detalhadas das
-            suas vendas, produtos e regiões de destaque.
-            <p></p>
-            <p>&nbsp;</p>
-            Facilitando a tomada de decisões estratégicas e o monitoramento das
-            suas operações.
-          </Typography> */}
+            The coin that brings laughter and value together on the Solana blockchain! 🚀😂
+          </Typography>
         </Stack>
         <StyledBox id="image" />
       </Container>

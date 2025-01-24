@@ -37,7 +37,7 @@ export default function FAQ() {
           textAlign: { sm: 'left', md: 'center' },
         }}
       >
-        Perguntas Respondidas Frequentemente
+        FAQ
       </Typography>
       <Box sx={{ width: '100%' }}>
         <Accordion
@@ -50,7 +50,7 @@ export default function FAQ() {
             id="panel1d-header"
           >
             <Typography component="h3" variant="subtitle2">
-              Como entro em contato com o suporte caso tenha uma dúvida ou problema?
+              How can I buy and hold LolFi tokens on the Solana network?
             </Typography>
           </AccordionSummary>
           <AccordionDetails>
@@ -59,10 +59,7 @@ export default function FAQ() {
               gutterBottom
               sx={{ maxWidth: { sm: '100%', md: '70%' } }}
             >
-              Você pode entrar em contato com nossa equipe de suporte
-              enviando um e-mail para
-              <Link> metriqa.suporte@gmail.com. </Link>
-              Estamos prontos para ajudar você rapidamente.
+              To buy and hold LolFi tokens, you need a Solana wallet, such as Phantom or Sollet. Once you’ve set up your wallet, you can purchase LolFi tokens through Solana-based decentralized exchanges (DEXs) or bridges. Simply transfer the tokens to your wallet for safekeeping.
             </Typography>
           </AccordionDetails>
         </Accordion>
@@ -76,7 +73,7 @@ export default function FAQ() {
             id="panel2d-header"
           >
             <Typography component="h3" variant="subtitle2">
-              Posso cancelar ou modificar o serviço se ele não atender às minhas expectativas?
+              Can I trade or swap LolFi tokens for other Solana-based assets?
             </Typography>
           </AccordionSummary>
           <AccordionDetails>
@@ -85,7 +82,7 @@ export default function FAQ() {
               gutterBottom
               sx={{ maxWidth: { sm: '100%', md: '70%' } }}
             >
-              Sim, oferecemos flexibilidade para ajustes no plano ou cancelamento conforme suas necessidades.
+              Yes, LolFi tokens can be traded on decentralized exchanges (DEXs) built on the Solana network, such as Serum and Raydium. You can swap LolFi for other Solana-based tokens or assets at any time, provided liquidity is available.
             </Typography>
           </AccordionDetails>
         </Accordion>
@@ -99,7 +96,7 @@ export default function FAQ() {
             id="panel3d-header"
           >
             <Typography component="h3" variant="subtitle2">
-              O que faz o seu produto se destacar no mercado?
+              What makes LolFi different from other tokens in the Solana ecosystem?
             </Typography>
           </AccordionSummary>
           <AccordionDetails>
@@ -108,10 +105,7 @@ export default function FAQ() {
               gutterBottom
               sx={{ maxWidth: { sm: '100%', md: '70%' } }}
             >
-              Nosso produto oferece métricas detalhadas de vendas,
-              top produtos, relatórios regionais, informando tudo que você necessita e integrado à
-              plataforma do Mercado Livre e Shopee(em breve), proporcionando uma visão
-              estratégica das suas operações e com preço justo.
+              LolFi is a fun, meme-inspired token built on the Solana blockchain. Unlike traditional tokens, LolFi emphasizes community-driven development, rewards, and collaborations within the Solana ecosystem. It aims to combine the meme culture with decentralized finance (DeFi) and provide unique opportunities for token holders.
             </Typography>
           </AccordionDetails>
         </Accordion>
@@ -125,7 +119,7 @@ export default function FAQ() {
             id="panel4d-header"
           >
             <Typography component="h3" variant="subtitle2">
-              Qual o nível de segurança da plataforma?
+              How secure is the LolFi token and platform?
             </Typography>
           </AccordionSummary>
           <AccordionDetails>
@@ -134,12 +128,7 @@ export default function FAQ() {
               gutterBottom
               sx={{ maxWidth: { sm: '100%', md: '70%' } }}
             >
-              Nossa plataforma utiliza autenticação segura com cookies e tokens criptografados
-              para garantir que apenas você tenha acesso as suas informações.
-              Além disso, temos acesso somente de leitura nas plataformas Mercado Livre e
-              Shopee, o que significa que seus dados ficam protegidos e não é possível ser feita
-              nenhuma alteração em sua conta. O foco é oferecer segurança
-              e transparência no monitoramento de suas vendas.
+              The LolFi token is built on the Solana blockchain, which is known for its speed, security, and low transaction fees. We follow best practices for token security, including regular audits and community involvement. However, as with any cryptocurrency, it is essential to store your tokens in a secure wallet and be cautious when engaging in transactions.
             </Typography>
           </AccordionDetails>
         </Accordion>
