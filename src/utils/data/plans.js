@@ -1,0 +1,56 @@
+const plans = [
+  {
+    title: 'Plano Shopee',
+    price: '39,90',
+    link: '',
+    description: [
+      'Integração com Shopee',
+      'Monitoramento das suas vendas',
+      'Gráficos detalhados dos produtos',
+      'Indicadores de top produtos em vendas',
+      'Top produtos em vendas e por região',
+      'Relatórios completos',
+      'Suporte via email',
+    ],
+    buttonText: 'Em Breve',
+    buttonVariant: 'disabled',
+    buttonColor: 'secondary',
+  },
+  {
+    title: 'Plano Mercado Livre',
+    subheader: 'Mais vendido',
+    price: '39,90',
+    link: 'https://buy.stripe.com/test_bIY9Bk0H1fRG6AgcMM',
+    description: [
+      'Integração com Mercado Livre',
+      'Monitoramento das suas vendas',
+      'Gráficos detalhados dos produtos',
+      'Indicadores de top produtos em vendas',
+      'Top produtos em vendas e por região',
+      'Relatórios completos',
+      'Suporte via email',
+    ],
+    buttonText: 'Selecionar',
+    buttonVariant: 'contained',
+    buttonColor: 'primary',
+  },
+  {
+    title: 'Plano Mercado Livre + Shopee',
+    price: '49,90',
+    link: '',
+    description: [
+      'Integração com Mercado Livre e Shopee',
+      'Dashboards separados por plataforma',
+      'Monitoramento das suas vendas',
+      'Gráficos detalhados dos produtos',
+      'Top produtos em vendas e por região',
+      'Relatórios completos',
+      'Suporte via email',
+    ],
+    buttonText: 'Em Breve',
+    buttonVariant: 'outlined',
+    buttonColor: 'secondary',
+  },
+];
+
+export default plans;

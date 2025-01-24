@@ -15,11 +15,7 @@ import CheckCircleRoundedIcon from '@mui/icons-material/CheckCircleRounded';
 import plans from 'utils/data/plans'
 
 export default function Pricing() {
-  const navigate = useNavigate();
 
-  const handleCheckout = (planTitle, planPrice, PlanLink) => {
-    navigate('/checkout', { state: { title: planTitle, price: planPrice, link: PlanLink } });
-  };
   return (
     <Container
       id="pricing"

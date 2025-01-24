@@ -1,8 +1,7 @@
-import { useState, useEffect, useContext } from "react";
+import { useState, useEffect } from "react";
 import { Routes, Route, Navigate, useLocation, useNavigate } from "react-router-dom";
 import CssBaseline from "@mui/material/CssBaseline";
 import routes from "routes";
-import { setupAxiosInterceptors } from "./infrastructure/http/interceptor";
 import TemplateFrame from "./shared-theme/TemplateFrame";
 
 export default function App() {
@@ -17,12 +16,6 @@ export default function App() {
     setMode(newMode);
     localStorage.setItem('themeMode', newMode);
   };
-
-  useEffect(() => {
-    setupAxiosInterceptors(() => {
-      navigate("/auth/login");
-    });
-  }, [navigate]);
 
   useEffect(() => {
     window.scrollTo({
