@@ -144,7 +144,7 @@ export const getDesignTokens = (mode) => {
         default: brand[50],
         defaultBlue: brand[800],
         paper: brand[100],
-        ...(mode === 'dark' && { default: gray[800], paper: brand[900] }),
+        ...(mode === 'dark' && { default: gray[900], paper: brand[900] }),
       },
       text: {
         primary: brand[800],

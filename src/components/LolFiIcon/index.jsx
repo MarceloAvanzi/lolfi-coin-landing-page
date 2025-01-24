@@ -62,7 +62,7 @@ export default function AnimatedCoinWithText({ width = 50, height = 50, ml = 0, 
           fontFamily: 'Arial, sans-serif',
           fontWeight: 'bold',
           fontSize: 20,
-          color: '#FFD700',
+          color: '#FFA500',
         }}
       >
         LOLFI COIN

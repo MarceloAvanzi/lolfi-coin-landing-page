@@ -10,6 +10,7 @@ import Divider from '@mui/material/Divider';
 import MenuItem from '@mui/material/MenuItem';
 import Drawer from '@mui/material/Drawer';
 import MenuIcon from '@mui/icons-material/Menu';
+import Typography from '@mui/material/Typography';
 import CloseRoundedIcon from '@mui/icons-material/CloseRounded';
 import LolFiIcon from 'components/LolFiIcon';
 
@@ -96,42 +97,46 @@ export default function Header() {
                     <IconButton onClick={toggleDrawer(false)}>
                       <CloseRoundedIcon />
                     </IconButton>
+                    <Typography component="h2" variant="h5" color='primary'>
+                      LOLFI COIN
+                    </Typography>
                   </Box>
                   <Divider sx={{ my: 3 }} />
                   <Box sx={{
                     display: 'flex',
                     flexDirection: 'column',
                     gap: 3,
-                    alignItems: 'start'
+                    alignItems: 'start',
+                    width: '100%'
                   }}>
-                    <Button variant="outlined" color="info" size="small" onClick={() => {
+                    <Button variant="outlined" color="secondary" size="medium" onClick={() => {
                       const section = document.getElementById("features");
                       if (section) {
                         section.scrollIntoView({ behavior: 'smooth' });
                       }
                       setOpen(false);
                     }}>
-                      <MenuItem>Nosso Produto</MenuItem>
+                      <MenuItem>What is LolFi?</MenuItem>
                     </Button>
-                    <Button variant="outlined" color="info" size="small" onClick={() => {
+                    <Button variant="outlined" color="secondary" size="medium" onClick={() => {
                       const section = document.getElementById("highlights");
                       if (section) {
                         section.scrollIntoView({ behavior: 'smooth' });
                       }
                       setOpen(false);
                     }}>
-                      <MenuItem>Destaques</MenuItem>
+                      <MenuItem>Social Media & Community</MenuItem>
                     </Button>
-                    <Button variant="outlined" color="info" size="small" onClick={() => {
+                    <Button variant="outlined" color="secondary" size="medium" onClick={() => {
                       const section = document.getElementById("pricing");
                       if (section) {
                         section.scrollIntoView({ behavior: 'smooth' });
                       }
                       setOpen(false);
                     }}>
-                      <MenuItem>Planos</MenuItem>
+                      <MenuItem>Where can I buy?</MenuItem>
                     </Button>
-                    <Button sx={{ mb: 2 }} variant="outlined" color="info" size="small" onClick={() => {
+                    <Button sx={{ mb: 2 }} variant="outlined" color="secondary" size="medium" onClick={() => {
                       const section = document.getElementById("faq");
                       if (section) {
                         section.scrollIntoView({ behavior: 'smooth' });
