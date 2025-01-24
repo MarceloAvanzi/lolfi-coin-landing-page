@@ -10,7 +10,10 @@ import { styled } from '@mui/system';
 
 // Styled components for a vibrant Twitter card
 const TwitterCard = styled(Card)(({ theme }) => ({
-  background: `url('https://path-to-your-twitter-background-image.jpg') center/cover no-repeat`,
+  background: theme.palette.background.paper,
+  ...(theme.palette.mode === 'dark' && {
+    background: theme.palette.background.paper,
+  }),
   color: 'white',
   height: '100%',
   borderRadius: '16px',
@@ -20,7 +23,7 @@ const TwitterCard = styled(Card)(({ theme }) => ({
   justifyContent: 'space-between',
   cursor: 'pointer',
   '&:hover': {
-    backgroundColor: 'rgba(0, 0, 0, 0.6)', // Darkens background on hover
+    backgroundColor: 'rgba(36, 19, 5, 0.6)', // Darkens background on hover
   },
 }));
 
@@ -62,7 +65,7 @@ export default function Highlights() {
           <Typography component="h2" variant="h4" gutterBottom color="primary">
             Social Media & Community
           </Typography>
-          <Typography variant="body1" sx={{ color: 'grey.200' }}>
+          <Typography variant="body1" sx={{ color: 'primary.dark' }}>
             Join the fun! Follow us on Twitter for real-time updates, exclusive content, and connect with the LolFi community!
           </Typography>
         </Box>
@@ -87,11 +90,11 @@ export default function Highlights() {
                   >
                     {item.icon}
                   </Box>
-                  <Typography sx={{ fontWeight: 'bold', fontSize: '1.25rem' }}>
+                  <Typography sx={{ fontWeight: 'bold', fontSize: '1.25rem', color: 'primary.dark' }}>
                     {item.title}
                   </Typography>
                 </Box>
-                <Typography variant="body2" sx={{ color: 'grey.200', mb: 2 }}>
+                <Typography variant="body2" sx={{ color: 'primary.dark', mb: 2 }}>
                   {item.description}
                 </Typography>
                 <Button

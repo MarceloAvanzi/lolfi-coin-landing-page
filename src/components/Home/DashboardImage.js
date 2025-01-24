@@ -84,7 +84,7 @@ export default function DashboardImage() {
                 fontSize: 'inherit',
                 color: 'primary.main',
                 ...theme.applyStyles('dark', {
-                  color: 'primary.light',
+                  color: 'primary.main',
                 }),
               })}
             >

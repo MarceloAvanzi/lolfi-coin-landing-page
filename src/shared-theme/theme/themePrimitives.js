@@ -5,7 +5,7 @@ const defaultTheme = createTheme();
 const customShadows = [...defaultTheme.shadows];
 
 export const brand = {
-  50: 'hsl(50, 100%, 95%)',   // Soft golden glow
+  50: 'hsl(50, 66.70%, 96.50%)',   // Soft golden glow
   100: 'hsl(50, 100%, 90%)',  // Light yellow
   200: 'hsl(48, 100%, 75%)',  // Bright sunny yellow
   300: 'hsl(45, 95%, 60%)',   // Warm golden yellow
@@ -14,7 +14,7 @@ export const brand = {
   600: 'hsl(40, 80%, 38%)',   // Burnt gold, grounding tones
   700: 'hsl(37, 75%, 30%)',   // Dark gold, for depth
   800: 'hsl(35, 70%, 20%)',   // Antique gold, background highlights
-  900: 'hsl(32, 65%, 12%)',   // Rich brown-gold, deep contrast
+  900: 'hsl(31, 67.60%, 7.30%)',   // Rich brown-gold, deep contrast
 };
 
 
@@ -111,9 +111,9 @@ export const getDesignTokens = (mode) => {
         light: blue[100],
         main: blue[300],
         dark: blue[600],
-        contrastText: gray[50],
+        contrastText: gray[600],
         ...(mode === 'dark' && {
-          contrastText: blue[300],
+          contrastText: gray[300],
           light: blue[500],
           main: blue[700],
           dark: blue[900],

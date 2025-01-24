@@ -164,6 +164,7 @@ export default function Features() {
                     '&:hover': {
                       backgroundColor: theme.palette.action.hover,
                     },
+                    border: selectedItemIndex === index ? `1px solid ${theme.palette.primary.main}` : 'none',
                   }),
                   selectedItemIndex === index && {
                     backgroundColor: 'background.paper',
@@ -180,16 +181,40 @@ export default function Features() {
                       gap: 1,
                       textAlign: 'left',
                       textTransform: 'none',
-                      color: 'primary.light',
+                      color: 'primary.main', // default color for text
                     },
                     selectedItemIndex === index && {
-                      color: 'primary.dark',
+                      color: 'primary.main', // color for selected state
                     },
                   ]}
                 >
                   {icon}
-                  <Typography variant="h6">{title}</Typography>
-                  <Typography variant="body2">{description}</Typography>
+                  <Typography
+                    variant="h6"
+                    sx={[
+                      {
+                        color: 'primary.main', // default color for title
+                      },
+                      selectedItemIndex === index && {
+                        color: 'primary.main', // color for title when selected
+                      },
+                    ]}
+                  >
+                    {title}
+                  </Typography>
+                  <Typography
+                    variant="body2"
+                    sx={[
+                      {
+                        color: 'primary.dark', // default color for description
+                      },
+                      selectedItemIndex === index && {
+                        color: 'primary.dark', // color for description when selected
+                      },
+                    ]}
+                  >
+                    {description}
+                  </Typography>
                 </Box>
               </Box>
             ))}

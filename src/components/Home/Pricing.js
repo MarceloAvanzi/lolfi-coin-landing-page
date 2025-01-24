@@ -61,6 +61,7 @@ export default function Pricing() {
                   display: 'flex',
                   flexDirection: 'column',
                   gap: 4,
+                  backgroundColor: 'background.paper',
                 },
               ]}
             >
