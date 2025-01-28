@@ -84,24 +84,16 @@ export default function DashboardImage() {
           <Typography
             variant="h1"
             component="span"
-            sx={{
-              fontSize: 'clamp(3rem, 10vw, 3.5rem)',
+            sx={(theme) => ({
+              fontSize: '40px',
               fontWeight: 'bold',
-            }}
+              color: 'primary.main',
+              ...theme.applyStyles('dark', {
+                color: 'primary.main',
+              }),
+            })}
           >
-            <Typography
-              component="span"
-              variant="h1"
-              sx={(theme) => ({
-                fontSize: 'inherit',
-                color: 'white',
-                ...theme.applyStyles('dark', {
-                  color: 'white',
-                }),
-              })}
-            >
-              Welcome to LolFi
-            </Typography>
+            Welcome to LolFi
           </Typography>
           <Typography
             component="span"
@@ -128,7 +120,7 @@ export default function DashboardImage() {
               top: 0,
               left: 0,
               width: '100%',
-              height: isMobile ? '90%' : '100%',
+              height: isMobile ? '100%' : '100%',
               objectFit: 'cover',
               zIndex: -1,
               boxShadow: '0 0 15px rgba(0, 0, 0, 0.9)',
