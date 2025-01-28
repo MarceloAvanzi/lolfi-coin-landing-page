@@ -80,7 +80,7 @@ function MobileLayout({ selectedItemIndex, handleItemClick, selectedFeature }) {
           />
         ))}
       </Box>
-      <Card variant="outlined">
+      <Card variant="outlined" sx={{ backgroundColor: 'background.paper', }}>
         <Box
           sx={(theme) => ({
             mb: 2,
