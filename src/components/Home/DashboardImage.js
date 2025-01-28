@@ -122,12 +122,13 @@ export default function DashboardImage() {
             autoPlay
             loop
             muted
+            playsInline
             style={{
               position: 'absolute',
               top: 0,
               left: 0,
               width: '100%',
-              height: isMobile ? '90%' : '100%',  // Set height to 85% on mobile
+              height: isMobile ? '90%' : '100%',
               objectFit: 'cover',
               zIndex: -1,
               boxShadow: '0 0 15px rgba(0, 0, 0, 0.9)',
