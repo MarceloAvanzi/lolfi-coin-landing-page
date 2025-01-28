@@ -157,9 +157,9 @@ export const getDesignTokens = (mode) => {
       },
       divider: mode === 'dark' ? alpha(brand[700], 0.6) : alpha(brand[300], 0.4),
       background: {
-        default: brand[50],
+        default: brand[100],
         defaultBlue: brand[800],
-        paper: brand[100],
+        paper: brand[50],
         ...(mode === 'dark' && { default: gray[900], paper: brand[900] }),
       },
       text: {

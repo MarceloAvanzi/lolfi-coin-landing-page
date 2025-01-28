@@ -23,7 +23,7 @@ const TwitterCard = styled(Card)(({ theme }) => ({
   justifyContent: 'space-between',
   cursor: 'pointer',
   '&:hover': {
-    backgroundColor: 'rgba(36, 19, 5, 0.6)', // Darkens background on hover
+    backgroundColor: 'rgba(87, 57, 14, 0.6)', // Darkens background on hover
   },
 }));
 
@@ -65,7 +65,7 @@ export default function Highlights() {
           <Typography component="h2" variant="h4" gutterBottom color="primary">
             Social Media & Community
           </Typography>
-          <Typography variant="body1" sx={{ color: 'primary.dark' }}>
+          <Typography variant="body1" sx={{ color: 'text.primary' }}>
             Join the fun! Follow us on Twitter for real-time updates, exclusive content, and connect with the LolFi community!
           </Typography>
         </Box>
@@ -90,7 +90,7 @@ export default function Highlights() {
                   >
                     {item.icon}
                   </Box>
-                  <Typography sx={{ fontWeight: 'bold', fontSize: '1.25rem', color: 'primary.dark' }}>
+                  <Typography sx={{ fontWeight: 'bold', fontSize: '1.25rem', color: 'text.primary' }}>
                     {item.title}
                   </Typography>
                 </Box>

@@ -212,10 +212,10 @@ export default function Features() {
                     variant="body2"
                     sx={[
                       {
-                        color: 'primary.dark', // default color for description
+                        color: 'text.primary', // default color for description
                       },
                       selectedItemIndex === index && {
-                        color: 'primary.dark', // color for description when selected
+                        color: 'text.primary', // color for description when selected
                       },
                     ]}
                   >
@@ -246,6 +246,7 @@ export default function Features() {
               width: '100%',
               display: { xs: 'none', sm: 'flex' },
               pointerEvents: 'none',
+              backgroundColor: 'background.paper'
             }}
           >
             <Box
