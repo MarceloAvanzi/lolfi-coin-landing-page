@@ -10,6 +10,9 @@ import { styled } from '@mui/material/styles';
 import SentimentSatisfiedRoundedIcon from '@mui/icons-material/SentimentSatisfiedRounded';
 import TrendingUpRoundedIcon from '@mui/icons-material/TrendingUpRounded';
 import DevicesRoundedIcon from '@mui/icons-material/DevicesRounded';
+import lolfiCoin from 'assets/images/lolfi-icons/coin.jpeg';
+import lolfiCoin2 from 'assets/images/lolfi-icons/coin2.jpeg';
+import purposeImage from 'assets/images/lolfi-icons/purpose.png';
 
 const items = [
   {
@@ -17,24 +20,24 @@ const items = [
     title: 'LolFi Coin',
     description:
       'LolFi is a community-driven meme coin built on the Solana blockchain, combining fun 🤪, innovation 💡, and decentralized finance (DeFi) 🚀.',
-    imageLight: 'url("/static/images/templates/templates-images/dash-light.png")',
-    imageDark: 'url("/static/images/templates/templates-images/dash-dark.png")',
+    imageLight: `url(${lolfiCoin})`,
+    imageDark: `url(${lolfiCoin})`,
   },
   {
     icon: <TrendingUpRoundedIcon />,
     title: 'Purpose',
     description:
-      'Designed to spread laughter while exploring the potential of crypto 💰, LolFi is more than just a coin, it\'s a movement ✊ to unite humor and blockchain technology. Join the fun and be part of the LolFi revolution! 🎉',
-    imageLight: 'url("/static/images/templates/templates-images/mobile-light.png")',
-    imageDark: 'url("/static/images/templates/templates-images/mobile-dark.png")',
+      'Designed to explore the potential of crypto 💰, LolFi is more than just a coin, it\'s a movement ✊ to unite humor and blockchain technology. Join the fun and be part of the LolFi revolution! 🎉',
+    imageLight: `url(${purposeImage})`,
+    imageDark: `url(${purposeImage})`,
   },
   {
     icon: <DevicesRoundedIcon />,
     title: 'Is it a Joke Coin?',
     description:
       'Absolutely not, joke is just on the name! LolFi is a serious project, representing the spirit of fun 😜, community 👥, and innovation in the crypto world 🌍. We\'re here to make an impact while keeping things light-hearted! 😎',
-    imageLight: 'url("/static/images/templates/templates-images/devices-light.png")',
-    imageDark: 'url("/static/images/templates/templates-images/devices-dark.png")',
+    imageLight: `url(${lolfiCoin2})`,
+    imageDark: `url(${lolfiCoin2})`,
   },
 ];
 
@@ -59,7 +62,7 @@ function MobileLayout({ selectedItemIndex, handleItemClick, selectedFeature }) {
 
   return (
     <Box
-      id='features'
+      id="features"
       sx={{
         display: { xs: 'flex', sm: 'none' },
         flexDirection: 'column',
@@ -85,6 +88,8 @@ function MobileLayout({ selectedItemIndex, handleItemClick, selectedFeature }) {
             backgroundPosition: 'center',
             minHeight: 280,
             backgroundImage: 'var(--items-imageLight)',
+            boxShadow: 10,
+            borderRadius: 2,
             ...theme.applyStyles('dark', {
               backgroundImage: 'var(--items-imageDark)',
             }),
@@ -105,7 +110,7 @@ function MobileLayout({ selectedItemIndex, handleItemClick, selectedFeature }) {
           >
             {selectedFeature.title}
           </Typography>
-          <Typography variant="body2" sx={{ color: 'primary.light', mb: 1.5 }}>
+          <Typography variant="body2" sx={{ color: 'text.primary', mb: 1 }}>
             {selectedFeature.description}
           </Typography>
         </Box>
@@ -113,6 +118,7 @@ function MobileLayout({ selectedItemIndex, handleItemClick, selectedFeature }) {
     </Box>
   );
 }
+
 
 export { MobileLayout };
 
@@ -247,7 +253,10 @@ export default function Features() {
                 m: 'auto',
                 width: { xs: 320, sm: 420 },
                 height: 500,
-                backgroundSize: 'contain',
+                boxShadow: 10,
+                borderRadius: 2,
+                backgroundSize: 'cover',
+                backgroundPosition: 'center',
                 backgroundImage: 'var(--items-imageLight)',
                 ...theme.applyStyles('dark', {
                   backgroundImage: 'var(--items-imageDark)',
