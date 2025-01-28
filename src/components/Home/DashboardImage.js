@@ -3,40 +3,52 @@ import Box from '@mui/material/Box';
 import Container from '@mui/material/Container';
 import Stack from '@mui/material/Stack';
 import Typography from '@mui/material/Typography';
-import dashboardWhiteTheme from 'assets/images/dashboard/dashboardWhiteTheme.png';
-import dashboardDarkTheme from 'assets/images/dashboard/dashboardDarkTheme.png';
+import bgCoinWhite from 'assets/images/dashboard/background.png';
+import bgCoinDark from 'assets/images/dashboard/background.png';
+import video from 'assets/videos/coin_desktop.mp4';
+import videoMobile from 'assets/videos/coin_mobile.mp4';
 import { styled } from '@mui/material/styles';
+import { useMediaQuery } from '@mui/material';
 
 const StyledBox = styled('div')(({ theme }) => ({
   alignSelf: 'center',
   width: '100%',
   height: 400,
-  marginTop: theme.spacing(8),
+  marginTop: theme.spacing(6),
   borderRadius: theme.shape.borderRadius,
   outline: '6px solid',
-  outlineColor: 'hsla(220, 25%, 80%, 0.2)',
+  outlineColor: 'hsla(217, 8.00%, 19.60%, 0.20)',
   border: '1px solid',
-  borderColor: theme.palette.grey[200],
-  boxShadow: '0 0 12px 8px hsla(220, 25%, 80%, 0.2)',
-  backgroundImage: `url(${dashboardWhiteTheme})`,
-  backgroundSize: '1280px 700px',
+  borderColor: theme.palette.grey[500],
+  boxShadow: '0 0 12px 8px hsla(218, 9.90%, 47.50%, 0.20)',
+  backgroundImage: `url(${bgCoinWhite})`,
+  backgroundSize: 'cover',
+  backgroundPosition: 'center',
   [theme.breakpoints.up('sm')]: {
     marginTop: theme.spacing(10),
     height: 700,
+    backgroundSize: 'cover',
+    backgroundPosition: 'center',
   },
   [theme.breakpoints.down('sm')]: {
-    backgroundSize: 'contain',
-    height: 196,
+    backgroundSize: 'cover',
+    height: 300,
+    backgroundPosition: 'center',
   },
   ...theme.applyStyles('dark', {
     boxShadow: '0 0 24px 12px hsla(210, 100%, 25%, 0.2)',
-    backgroundImage: `url(${dashboardDarkTheme})`,
+    backgroundImage: `url(${bgCoinDark})`,
     outlineColor: 'hsla(220, 20%, 42%, 0.1)',
     borderColor: theme.palette.grey[700],
+    backgroundSize: 'cover',
+    backgroundPosition: 'center',
   }),
 }));
 
 export default function DashboardImage() {
+  // Media query to check if the screen is small (sm or below)
+  const isMobile = useMediaQuery((theme) => theme.breakpoints.down('sm'));
+
   return (
     <Box
       id="hero"
@@ -61,12 +73,12 @@ export default function DashboardImage() {
         }}
       >
         <Stack
-          spacing={2}
+          spacing={1}
           useFlexGap
           sx={{
             alignItems: 'center',
             width: { xs: '100%', sm: '70%' },
-            textAlign: 'center', // Added text alignment to center the content
+            textAlign: 'center',
           }}
         >
           <Typography
@@ -74,7 +86,7 @@ export default function DashboardImage() {
             component="span"
             sx={{
               fontSize: 'clamp(3rem, 10vw, 3.5rem)',
-              fontWeight: 'bold', // Optional, you can add this if you want the text to be bolder
+              fontWeight: 'bold',
             }}
           >
             <Typography
@@ -82,9 +94,9 @@ export default function DashboardImage() {
               variant="h1"
               sx={(theme) => ({
                 fontSize: 'inherit',
-                color: 'primary.main',
+                color: 'white',
                 ...theme.applyStyles('dark', {
-                  color: 'primary.main',
+                  color: 'white',
                 }),
               })}
             >
@@ -95,15 +107,35 @@ export default function DashboardImage() {
             component="span"
             sx={{
               textAlign: 'center',
-              color: 'text.primary',
+              color: 'white',
               fontSize: '20px',
+              fontWeight: 'bold',
               width: { sm: '100%', md: '80%' },
             }}
           >
-            The coin that brings laughter and value together on the Solana blockchain! 🚀
+            The coin that brings laughter and value together! 🚀
           </Typography>
         </Stack>
-        <StyledBox id="image" />
+        <StyledBox id="image">
+          <video
+            src={isMobile ? videoMobile : video}
+            autoPlay
+            loop
+            muted
+            style={{
+              position: 'absolute',
+              top: 0,
+              left: 0,
+              width: '100%',
+              height: isMobile ? '85%' : '100%',  // Set height to 85% on mobile
+              objectFit: 'cover',
+              zIndex: -1,
+              boxShadow: '0 0 15px rgba(0, 0, 0, 0.9)',
+              transition: 'object-fit 0.3s ease',
+            }}
+          />
+        </StyledBox>
+
       </Container>
     </Box>
   );
